@@ -1,0 +1,48 @@
+.SortIcon {
+	font-size: 20px;
+	height: 13px;
+	display: none;
+}
+
+.active {
+	font-weight: bold;
+	color: var(--primary);
+}
+
+.active .SortIcon {
+	display: block;
+	margin-right: 8px;
+}
+
+.sortName {
+	display: none;
+}
+
+.sort {
+	display: inline-block;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 40px;
+
+}
+
+.sort button {
+	display: grid;
+	grid-template-columns: 20px 1fr;
+	align-items: center;
+	gap: 8px;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;
+
+	border: none;
+	background: none;
+
+	cursor: pointer;
+	outline-offset: 2px;
+}
+
+.sort button:not(.active) {
+	grid-template-columns: 1fr;
+}

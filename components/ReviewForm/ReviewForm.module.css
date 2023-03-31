@@ -1,0 +1,96 @@
+.reviewForm {
+	display: grid;
+	align-items: center;
+	font-size: 14px;
+	line-height: 24px;
+	grid-template-columns: [start] auto 1fr auto [end];
+	gap: 20px 30px;
+}
+
+.descr,
+.submit {
+	grid-column: start / end;
+}
+
+.title {
+	justify-self: left;
+}
+
+.info {
+	margin-left: 15px;
+}
+
+.rating {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 20px;
+}
+
+.panel {
+	position: relative;
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+.success {
+
+	background: var(--green-light);
+
+}
+
+.error {
+	background: var(--red-light);
+}
+
+.error .closeIcon path {
+	stroke: var(--red);
+}
+
+
+
+.successTitle {
+	font-weight: bold;
+}
+
+.closeIcon {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	font-size: 12px;
+
+	cursor: pointer;
+
+	border: none;
+	background: none;
+	outline-offset: 5px;
+}
+
+
+@media screen and (max-width:1103px) {
+	.reviewForm {
+		grid-template-columns: [start] 1fr 1fr [end];
+	}
+
+	.rating {
+		grid-column: start/end;
+	}
+
+
+	.title {
+		justify-self: normal;
+	}
+}
+
+@media screen and (max-width:875px) and (min-width:766px) {
+	.reviewForm {
+		grid-template-columns: [start] 1fr [end];
+	}
+}
+
+
+@media screen and (max-width:640px) {
+	.reviewForm {
+		grid-template-columns: [start] 1fr [end];
+	}
+}
